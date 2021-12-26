@@ -441,24 +441,47 @@ header .mobile {
   color: #4a4a4a;
 }
 
-#quotes-section quote-citation {
+#quotes-section .quote-citation {
   height: 1.875rem;
 }
 
-@media only screen and (max-width: 760px) {
-  #quotes-section content {
+@media only screen and (max-width: 1024px) {
+  #quotes-section .content {
+    display: flex;
+    padding: 5rem;
+    }
+
+  #quotes-section .quote {
+    display: block;
+    padding: 0;
+    text-align: left;
+  }
+
+  #quotes-section .quote-citation {
+    display: block;
+    width: auto;
+    height: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  #quotes-section .content {
+    display: inline;
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
+    text-align: center;;
   }
 
-  #quotes-section quote-citation {
+  #quotes-section .quote-citation {
     display: block;
     padding-top: 1rem;
     margin: auto;
+    text-align: center;
   }
 }
 
